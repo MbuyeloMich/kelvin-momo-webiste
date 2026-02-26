@@ -26,7 +26,13 @@ function App() {
           className="bg-white relative opacity-0 transition-opacity duration-700"
           style={{ opacity: loadingVisible ? 0 : 1 }}
         >
-          <div className="relative min-h-screen w-full bg-cover bg-center bg-[url('/hero.jpg')]">
+          {/* Fixed background image path with BASE_URL */}
+          <div 
+            className="relative min-h-screen w-full bg-cover bg-center"
+            style={{ 
+              backgroundImage: `url(${import.meta.env.BASE_URL}hero.jpg)`
+            }}
+          >
             <Navbar triggerAnimation={!loadingVisible} />
             <Hero triggerAnimation={!loadingVisible} />
           </div>
@@ -42,4 +48,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
