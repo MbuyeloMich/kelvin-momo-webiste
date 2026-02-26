@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://MbuyeloMich.github.io/kelvin-momo-website",
+  "homepage": "https://MbuyeloMich.github.io/kelvin-momo-webiste",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
