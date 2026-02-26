@@ -1,13 +1,16 @@
 {
-  "name": "burnaboy-gsap",
+  "name": "kelvin-momo-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "homepage": "https://MbuyeloMich.github.io/kelvin-momo-website",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
