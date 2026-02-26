@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 
 const Navbar = ({ triggerAnimation }) => {
@@ -82,7 +81,7 @@ const Navbar = ({ triggerAnimation }) => {
         <div className="flex items-center">
           <a href="/">
             <img
-              src="/logo.png"
+              src={`${import.meta.env.BASE_URL}logo.jpg`}
               alt="Logo"
               className="h-40 w-40 object-contain"
             />

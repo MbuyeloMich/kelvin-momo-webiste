@@ -88,7 +88,7 @@ const Footer = () => {
     <footer className="bg-zinc-900 text-white py-12 px-6 text-center">
       <div ref={logoRef} className="mb-4">
         <img
-          src="/logo.png"
+          src={`${import.meta.env.BASE_URL}logo.jpg`}
           alt="Burna Boy Logo"
           className="mx-auto w-25 h-25"
         />

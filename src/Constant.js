@@ -1,3 +1,5 @@
+const ASSET_BASE = import.meta.env.BASE_URL;
+
 export const albums = [
   {
     id: 1,
@@ -6,7 +8,7 @@ export const albums = [
     tracks: 17,
     genre: "Afrobeat, Ragga, Dancehall, Fuji",
     streams: "37 M",
-    image: "/albums/album-1.jpg",
+    image: `${ASSET_BASE}albums/album-1.jpg`,
     url: "https://open.spotify.com/album/7pqUKMWH6P7AJPIjUiphTS",
   },
   {
@@ -16,7 +18,7 @@ export const albums = [
     tracks: 14,
     genre: "Afrobeats, Afro-fusion",
     streams: "42.8 M",
-    image: "/albums/album-2.webp",
+    image: `${ASSET_BASE}albums/album-2.webp`,
     url: "https://open.spotify.com/album/5zH79s5J4D633IxoFWadp8",
   },
   {
@@ -26,7 +28,7 @@ export const albums = [
     tracks: 15,
     genre: "Afrobeats, Reggae, Dancehall",
     streams: "430 M",
-    image: "/albums/album-3.jpg",
+    image: `${ASSET_BASE}albums/album-3.jpg`,
     url: "https://open.spotify.com/album/5SCK5p3Rqgg0FwTmAurrcp",
   },
   {
@@ -36,7 +38,7 @@ export const albums = [
     tracks: 17,
     genre: "Afrobeats, Dancehall, Pop, Hip-hop",
     streams: "1.114 B",
-    image: "/albums/album-4.jpg",
+    image: `${ASSET_BASE}albums/album-4.jpg`,
     url: "https://open.spotify.com/album/79lrrUvUyIuOD12b5taQVP",
   },
   {
@@ -46,7 +48,7 @@ export const albums = [
     tracks: 14,
     genre: "Afrobeats, Dancehall, Pop, Hip-hop",
     streams: "357.4 M",
-    image: "/albums/album-5.jpg",
+    image: `${ASSET_BASE}albums/album-5.jpg`,
     url: "https://open.spotify.com/album/4moiYbxseWbPD2moVhOYje",
   },
   {
@@ -56,7 +58,7 @@ export const albums = [
     tracks: 16,
     genre: "Afro-fusion",
     streams: "1.435 B",
-    image: "/albums/album-6.jpg",
+    image: `${ASSET_BASE}albums/album-6.jpg`,
     url: "https://open.spotify.com/album/6kgDkAupBVRSqbJPUaTJwQ",
   },
   {
@@ -66,7 +68,7 @@ export const albums = [
     tracks: 13,
     genre: "Afro-fusion, Afrobeats, Hip-hop",
     streams: "701.5 M",
-    image: "/albums/album-7.jpg",
+    image: `${ASSET_BASE}albums/album-7.jpg`,
     url: "https://open.spotify.com/album/1JzjwUKkPsdHg1SQ7qa5hc",
   },
   {
@@ -76,7 +78,7 @@ export const albums = [
     tracks: 16,
     genre: "Afrobeats, Rock, Funk, Country, Electronic",
     streams: "134.6 M",
-    image: "/albums/album-8.jpg",
+    image: `${ASSET_BASE}albums/album-8.jpg`,
     url: "https://open.spotify.com/album/35EMM8QwKJ2qXmoUJnUSNf",
   },
 ];
@@ -258,7 +260,7 @@ export const merchItems = [
   {
     id: 1,
     name: "African Giant Anniversary T-Shirt",
-    image: "/merchs/African Giant Anniversary T-Shirt.webp",
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "₦12,000",
     originalPrice: "₦15,000",
     category: "Apparel",
@@ -267,14 +269,14 @@ export const merchItems = [
   {
     id: 2,
     name: "I Told Them... Fan Pack",
-    image: "/merchs/I told them... Fan Pack.webp",
+    image: `${ASSET_BASE}merchs/I told them... Fan Pack.webp`,
     price: "₦7,000",
     category: "Accessories",
   },
   {
     id: 3,
     name: "African Giant Anniversary T-Shirt",
-    image: "/merchs/African Giant Anniversary T-Shirt.webp",
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "₦25,000",
     category: "Apparel",
     limited: true,
@@ -282,7 +284,7 @@ export const merchItems = [
   {
     id: 4,
     name: "I told them... T-Shirt",
-    image: "/merchs/I told them... T-Shirt.webp",
+    image: `${ASSET_BASE}merchs/I told them... T-Shirt.webp`,
     price: "₦18,000",
     originalPrice: "₦22,000",
     category: "Apparel",
@@ -291,28 +293,28 @@ export const merchItems = [
   {
     id: 5,
     name: "Love, Damini Tee",
-    image: "/merchs/Love, Damini Tee.webp",
+    image: `${ASSET_BASE}merchs/Love, Damini Tee.webp`,
     price: "₦4,500",
     category: "Apparel",
   },
   {
     id: 6,
     name: "I told them... Vinyl",
-    image: "/merchs/I told them... Vinyl.webp",
+    image: `${ASSET_BASE}merchs/I told them... Vinyl.webp`,
     price: "₦3,000",
     category: "Art",
   },
   {
     id: 7,
     name: "Twice As Tall Exclusive Red Vinyl",
-    image: "/merchs/Twice As Tall Exclusive Red Vinyl.webp",
+    image: `${ASSET_BASE}merchs/Twice As Tall Exclusive Red Vinyl.webp`,
     price: "₦6,500",
     category: "Art",
   },
   {
     id: 8,
     name: "Twice As Tall T-Shirt(Black)",
-    image: "/merchs/Twice As Tall T-Shirt(Black).webp",
+    image: `${ASSET_BASE}merchs/Twice As Tall T-Shirt(Black).webp`,
     price: "₦8,000",
     category: "Accessories",
     limited: true,
@@ -320,7 +322,7 @@ export const merchItems = [
   {
     id: 9,
     name: "No Sign Of Weakness Vinyl",
-    image: "/merchs/No Sign Of Weakness Vinyl.webp",
+    image: `${ASSET_BASE}merchs/No Sign Of Weakness Vinyl.webp`,
     price: "₦8,000",
     category: "Art",
     bestseller: true,
@@ -328,7 +330,7 @@ export const merchItems = [
   {
     id: 10,
     name: "Love, Damini Vinyl",
-    image: "/merchs/Love, Damini Vinyl.webp",
+    image: `${ASSET_BASE}merchs/Love, Damini Vinyl.webp`,
     price: "₦8,000",
     category: "Art",
   },

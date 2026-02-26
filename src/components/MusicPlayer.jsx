@@ -43,7 +43,11 @@ export default function MusicPlayer() {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/sukakude.mp3" loop />
+      <audio
+        ref={audioRef}
+        src={`${import.meta.env.BASE_URL}audio/sukakude.mp3`}
+        loop
+      />
       <button
         onClick={togglePlayback}
         className="fixed bottom-5 right-4 cursor-pointer active:scale-75 bg-yellow-400 text-black font-bold px-4 py-2 rounded-full shadow-lg z-50 hover:bg-yellow-300 transition"

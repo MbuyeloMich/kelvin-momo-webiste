@@ -18,7 +18,7 @@ const LoadingScreen = ({ onFinish }) => {
       }`}
     >
       <img
-        src="/logo.png"
+        src={`${import.meta.env.BASE_URL}logo.jpg`}
         alt="Burna Boy Logo"
         className="w-48 h-auto mt-10"
       />
