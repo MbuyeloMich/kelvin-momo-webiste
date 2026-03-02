@@ -205,8 +205,8 @@ const Merch = () => {
           OFFICIAL MERCH
         </h2>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-          Represent the African Giant with exclusive merchandise from Burna
-          Boy's collection
+          Represent Kelvin Momo with exclusive merchandise from his official
+          collection
         </p>
       </div>
 

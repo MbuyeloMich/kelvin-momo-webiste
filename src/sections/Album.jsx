@@ -145,10 +145,10 @@ const Album = () => {
   return (
     <section
       id="album"
-      className="w-full min-h-screen overflow-x-hidden py-4 sm:py-8 text-white bg-zinc-800 flex flex-col justify-center"
+      className="w-full min-h-screen overflow-x-hidden py-4 sm:py-8 text-white bg-white flex flex-col justify-center"
       ref={containerRef}
     >
-      <h2 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 md:mb-12 text-yellow-400 px-4">
+      <h2 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 md:mb-12 text-black px-4">
         Albums
       </h2>
       <div className="flex gap-4 sm:gap-6 md:gap-8 cursor-grab select-none pl-4 sm:pl-6 md:pl-8 will-change-transform">
