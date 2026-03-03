@@ -50,7 +50,8 @@ export default function MusicPlayer() {
       />
       <button
         onClick={togglePlayback}
-        className="fixed bottom-5 right-4 cursor-pointer active:scale-75 bg-yellow-400 text-black font-bold px-4 py-2 rounded-full shadow-lg z-50 hover:bg-yellow-300 transition"
+        className="fixed bottom-5 right-4 cursor-pointer active:scale-95 bg-gradient-to-r from-cyan-400 to-emerald-400 text-zinc-950 font-bold p-3 rounded-2xl shadow-xl shadow-cyan-500/20 z-50 hover:from-cyan-300 hover:to-emerald-300 transition"
+        aria-label={isPlaying ? "Pause music" : "Play music"}
       >
         {isPlaying ? <Pause size={24} /> : <Play size={24} />}
       </button>

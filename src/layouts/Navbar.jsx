@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { SlidersHorizontal, X } from "lucide-react";
 
 const Navbar = ({ triggerAnimation }) => {
-  const topBar = useRef(null);
-  const bottomBar = useRef(null);
   const panelRef = useRef(null);
   const linksRef = useRef([]);
   const navRef = useRef(null);
@@ -18,11 +17,6 @@ const Navbar = ({ triggerAnimation }) => {
   };
 
   const openMenu = () => {
-    
-    gsap.to(topBar.current, { y: 10, rotate: 50, duration: 0.3 });
-    gsap.to(bottomBar.current, { y: -10, rotate: -50, duration: 0.3 });
-
-    
     gsap.to(panelRef.current, {
       x: 0,
       duration: 0.5,
@@ -45,11 +39,6 @@ const Navbar = ({ triggerAnimation }) => {
   };
 
   const closeMenu = () => {
-   
-    gsap.to(topBar.current, { y: 0, rotate: 0, duration: 0.3 });
-    gsap.to(bottomBar.current, { y: 0, rotate: 0, duration: 0.3 });
-
-   
     gsap.to(panelRef.current, {
       x: "100%",
       duration: 0.5,
@@ -89,16 +78,13 @@ const Navbar = ({ triggerAnimation }) => {
         </div>
         <button
           onClick={toggleMenu}
-          className="flex flex-col cursor-pointer justify-between h-7 w-8 focus:outline-none group"
+          className="cursor-pointer focus:outline-none rounded-full border border-zinc-300/70 bg-white/85 backdrop-blur-sm px-4 py-2 text-zinc-900 hover:bg-white transition-colors duration-300 flex items-center gap-2 shadow-sm"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
-          <span
-            ref={topBar}
-            className="block h-2 w-full bg-yellow-400 rounded transition-all duration-300 group-hover:bg-gray-700"
-          ></span>
-          <span
-            ref={bottomBar}
-            className="block h-2 w-full bg-yellow-400 rounded transition-all duration-300 group-hover:bg-gray-700"
-          ></span>
+          {isOpen ? <X size={18} /> : <SlidersHorizontal size={18} />}
+          <span className="text-xs uppercase tracking-[0.2em] font-semibold">
+            Menu
+          </span>
         </button>
       </nav>
       <div
