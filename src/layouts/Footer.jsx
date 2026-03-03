@@ -95,7 +95,22 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-zinc-900 text-white py-12 px-6 text-center">
+    <footer className="relative overflow-hidden bg-black text-white py-12 px-6 text-center">
+      <div className="pointer-events-none absolute inset-0">
+        {[...Array(24)].map((_, index) => (
+          <Music
+            key={index}
+            ref={(el) => (noteRefs.current[index] = el)}
+            size={14 + (index % 4) * 5}
+            className="absolute text-cyan-300/20"
+            style={{
+              left: `${(index * 7) % 100}%`,
+              top: `${8 + ((index * 13) % 80)}%`,
+            }}
+          />
+        ))}
+      </div>
+
       <div ref={logoRef} className="mb-4">
         <img
           src={`${import.meta.env.BASE_URL}logo.jpg`}
@@ -123,24 +138,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <div
-        ref={copyrightRef}
-        className="relative mt-8 overflow-hidden rounded-xl border border-zinc-800 bg-black px-4 py-6 text-gray-400 text-sm"
-      >
-        <div className="pointer-events-none absolute inset-0">
-          {[...Array(8)].map((_, index) => (
-            <Music
-              key={index}
-              ref={(el) => (noteRefs.current[index] = el)}
-              size={18 + (index % 3) * 4}
-              className="absolute text-cyan-400/20"
-              style={{
-                left: `${8 + index * 11}%`,
-                top: `${20 + (index % 4) * 16}%`,
-              }}
-            />
-          ))}
-        </div>
+      <div ref={copyrightRef} className="relative z-10 mt-8 px-4 py-6 text-gray-400 text-sm">
         <p className="relative z-10">(c) 2026 Kelvin Momo. All rights reserved.</p>
         <p className="relative z-10">Specially Made for Mr Private School Piano</p>
       </div>
