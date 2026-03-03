@@ -269,7 +269,7 @@ export const merchItems = [
   {
     id: 2,
     name: "Momo Cup",
-    image: `${ASSET_BASE}merchs/I told them... Fan Pack.webp`,
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "R650",
     category: "Accessories",
   },
@@ -284,7 +284,7 @@ export const merchItems = [
   {
     id: 4,
     name: "Baggy Trackie Set",
-    image: `${ASSET_BASE}merchs/I told them... T-Shirt.webp`,
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "R1,450",
     originalPrice: "R1,500",
     category: "Apparel",
@@ -293,28 +293,28 @@ export const merchItems = [
   {
     id: 5,
     name: "Tour Graphic Hoodie",
-    image: `${ASSET_BASE}merchs/Love, Damini Tee.webp`,
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "R1,100",
     category: "Apparel",
   },
   {
     id: 6,
     name: "Minimalist Fleece",
-    image: `${ASSET_BASE}merchs/I told them... Vinyl.webp`,
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "R980",
     category: "Apparel",
   },
   {
     id: 7,
     name: "Private School Trackie Pants",
-    image: `${ASSET_BASE}merchs/Twice As Tall Exclusive Red Vinyl.webp`,
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "R890",
     category: "Apparel",
   },
   {
     id: 8,
     name: "Momo Cup Deluxe",
-    image: `${ASSET_BASE}merchs/Twice As Tall T-Shirt(Black).webp`,
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "R780",
     category: "Accessories",
     limited: true,
@@ -322,7 +322,7 @@ export const merchItems = [
   {
     id: 9,
     name: "Oversized Fleece Hoodie",
-    image: `${ASSET_BASE}merchs/No Sign Of Weakness Vinyl.webp`,
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "R1,300",
     category: "Apparel",
     bestseller: true,
@@ -330,7 +330,7 @@ export const merchItems = [
   {
     id: 10,
     name: "Baggy Trackie Jacket",
-    image: `${ASSET_BASE}merchs/Love, Damini Vinyl.webp`,
+    image: `${ASSET_BASE}merchs/African Giant Anniversary T-Shirt.webp`,
     price: "R1,200",
     category: "Apparel",
   },

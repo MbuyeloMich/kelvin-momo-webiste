@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// Import the icons from lucide-react
-import { Instagram, Twitter, Music, Youtube, Video } from "lucide-react";
+import { Instagram, Twitter, Music, Youtube } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,6 +9,7 @@ const Footer = () => {
   const logoRef = useRef(null);
   const socialRef = useRef([]);
   const copyrightRef = useRef(null);
+  const noteRefs = useRef([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -31,7 +31,6 @@ const Footer = () => {
       );
 
       gsap.set(socialRef.current, { scale: 0, rotation: 180 });
-
       gsap.to(socialRef.current, {
         scale: 1,
         rotation: 0,
@@ -60,12 +59,23 @@ const Footer = () => {
           },
         },
       );
+
+      noteRefs.current.forEach((note, index) => {
+        if (!note) return;
+        gsap.to(note, {
+          y: index % 2 === 0 ? -18 : 18,
+          x: index % 2 === 0 ? 8 : -8,
+          duration: 4 + index,
+          ease: "sine.inOut",
+          repeat: -1,
+          yoyo: true,
+        });
+      });
     });
 
     return () => ctx.revert();
   }, []);
 
-  // Defined the social list with Component references
   const socials = [
     {
       name: "Instagram",
@@ -105,7 +115,7 @@ const Footer = () => {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 bg-zinc-800 hover:bg-yellow-400 hover:text-black rounded-full flex items-center justify-center transition-colors duration-300 border border-zinc-700 hover:border-yellow-400"
+            className="w-10 h-10 bg-zinc-800 hover:bg-cyan-400 hover:text-black rounded-full flex items-center justify-center transition-colors duration-300 border border-zinc-700 hover:border-cyan-300"
             title={social.name}
           >
             <social.Icon size={20} strokeWidth={2} />
@@ -113,9 +123,26 @@ const Footer = () => {
         ))}
       </div>
 
-      <div ref={copyrightRef} className="text-gray-500 text-sm">
-        <p>© 2026 Kelvin Momo. All rights reserved.</p>
-        <p>Specially Made for Mr Private School Piano</p>
+      <div
+        ref={copyrightRef}
+        className="relative mt-8 overflow-hidden rounded-xl border border-zinc-800 bg-black px-4 py-6 text-gray-400 text-sm"
+      >
+        <div className="pointer-events-none absolute inset-0">
+          {[...Array(8)].map((_, index) => (
+            <Music
+              key={index}
+              ref={(el) => (noteRefs.current[index] = el)}
+              size={18 + (index % 3) * 4}
+              className="absolute text-cyan-400/20"
+              style={{
+                left: `${8 + index * 11}%`,
+                top: `${20 + (index % 4) * 16}%`,
+              }}
+            />
+          ))}
+        </div>
+        <p className="relative z-10">(c) 2026 Kelvin Momo. All rights reserved.</p>
+        <p className="relative z-10">Specially Made for Mr Private School Piano</p>
       </div>
     </footer>
   );

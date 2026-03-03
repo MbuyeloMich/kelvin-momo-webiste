@@ -68,7 +68,7 @@ const Merch = () => {
               scale: 1.08,
               y: -15,
               rotationY: 5,
-              boxShadow: "0 25px 50px rgba(255, 215, 0, 0.3)",
+              boxShadow: "0 25px 50px rgba(34, 211, 238, 0.25)",
               duration: 0.5,
               ease: "power2.out",
             });
@@ -154,21 +154,11 @@ const Merch = () => {
               btn,
               { scale: 1 },
               {
-                scale: 1.2,
+                scale: 1.08,
                 duration: 0.1,
                 ease: "power2.out",
                 yoyo: true,
                 repeat: 1,
-                onComplete: () => {
-                  const originalText = btn.textContent;
-                  btn.textContent = "Added! ✓";
-                  btn.style.backgroundColor = "#10b981";
-
-                  setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.backgroundColor = "";
-                  }, 1500);
-                },
               }
             );
           };
@@ -193,14 +183,14 @@ const Merch = () => {
       className="min-h-screen bg-white text-black py-20 overflow-hidden relative"
     >
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-green-400 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-cyan-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl"></div>
       </div>
 
       <div className="text-center mb-16 relative z-10">
         <h2
           ref={titleRef}
-          className="text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 drop-shadow-2xl"
+          className="text-6xl md:text-8xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-500 to-blue-600 drop-shadow-2xl"
         >
           OFFICIAL MERCH
         </h2>
@@ -215,16 +205,16 @@ const Merch = () => {
           {duplicatedItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
-              className="merch-card relative bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl min-w-[300px] p-6 cursor-pointer border border-zinc-700/50 shadow-xl"
+              className="merch-card relative bg-gradient-to-br from-zinc-900 to-slate-800 rounded-2xl min-w-[300px] p-6 cursor-pointer border border-cyan-900/30 shadow-xl"
               ref={(el) => (cardRefs.current[index] = el)}
             >
               {item.bestseller && (
-                <div className="badge absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+                <div className="badge absolute -top-2 -right-2 bg-cyan-500 text-zinc-950 text-xs font-bold px-3 py-1 rounded-full z-10">
                   BESTSELLER
                 </div>
               )}
               {item.limited && (
-                <div className="badge absolute -top-2 -right-2 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full z-10">
+                <div className="badge absolute -top-2 -right-2 bg-slate-200 text-zinc-900 text-xs font-bold px-3 py-1 rounded-full z-10">
                   LIMITED
                 </div>
               )}
@@ -240,7 +230,7 @@ const Merch = () => {
 
               <div className="card-content">
                 <div className="mb-2">
-                  <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wide">
+                  <span className="text-xs text-cyan-300 font-semibold uppercase tracking-wide">
                     {item.category}
                   </span>
                 </div>
@@ -261,10 +251,10 @@ const Merch = () => {
                 </div>
 
                 <button
-                  className="relative w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wide transition-all duration-300 hover:from-yellow-300 hover:to-yellow-400 overflow-hidden"
+                  className="relative w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-zinc-950 px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wide transition-all duration-300 hover:from-cyan-300 hover:to-blue-400 overflow-hidden"
                   ref={(el) => (buttonRefs.current[index] = el)}
                 >
-                  Add to Cart
+                  View Product
                 </button>
               </div>
             </div>
@@ -274,7 +264,7 @@ const Merch = () => {
 
       <div className="text-center mt-12 opacity-60">
         <p className="text-sm text-gray-400">
-          Continuous scroll • Hover to interact with items
+          Continuous scroll | Hover to interact with items
         </p>
       </div>
     </section>
