@@ -70,17 +70,17 @@ const Footer = () => {
     {
       name: "Instagram",
       Icon: Instagram,
-      url: "https://instagram.com/burnaboygram",
+      url: "https://www.instagram.com/kelvinmomo_/",
     },
     {
       name: "Twitter",
       Icon: Twitter,
-      url: "https://twitter.com/burnaboy",
+      url: "",
     },
     {
       name: "YouTube",
       Icon: Youtube,
-      url: "https://youtube.com/burnaboy",
+      url: "https://www.youtube.com/channel/UC61G9NG-rDJcJ5N1yYLPM2Q",
     },
   ];
 
@@ -93,7 +93,7 @@ const Footer = () => {
           className="mx-auto w-25 h-25"
         />
         <p className="text-sm text-gray-400 uppercase tracking-wide mt-2">
-          The African Giant
+          Mr Private School Piano
         </p>
       </div>
 
@@ -114,8 +114,8 @@ const Footer = () => {
       </div>
 
       <div ref={copyrightRef} className="text-gray-500 text-sm">
-        <p>© 2025 Burna Boy. All rights reserved.</p>
-        <p>Specially Made for the African Giant</p>
+        <p>© 2026 Kelvin Momo. All rights reserved.</p>
+        <p>Specially Made for Mr Private School Piano</p>
       </div>
     </footer>
   );

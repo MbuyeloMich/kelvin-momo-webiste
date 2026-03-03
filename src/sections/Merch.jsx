@@ -190,7 +190,7 @@ const Merch = () => {
     <section
       ref={sectionRef}
       id="merch"
-      className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white py-20 overflow-hidden relative"
+      className="min-h-screen bg-white text-black py-20 overflow-hidden relative"
     >
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400 rounded-full blur-3xl"></div>
@@ -204,7 +204,7 @@ const Merch = () => {
         >
           OFFICIAL MERCH
         </h2>
-        <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+        <p className="text-xl text-gray-700 max-w-2xl mx-auto">
           Represent Kelvin Momo with exclusive merchandise from his official
           collection
         </p>
