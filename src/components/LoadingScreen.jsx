@@ -13,7 +13,7 @@ const LoadingScreen = ({ onFinish }) => {
 
   return (
     <div
-      className={`fixed inset-0 h-[70vh] flex flex-col items-center justify-center bg-gradient-to-br from-[#03120d] via-[#0a2f21] to-[#020806] z-50 transition-opacity duration-700 ${
+      className={`fixed inset-0 h-screen w-screen flex flex-col items-center justify-center bg-orange-500 z-50 transition-opacity duration-700 ${
         loadingComplete ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
